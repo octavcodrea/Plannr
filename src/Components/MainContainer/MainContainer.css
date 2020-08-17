@@ -1,0 +1,94 @@
+.mainContainer{
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-evenly;
+    /* flex-wrap: nowrap; */
+    /* justify-content: space-evenly; */
+    padding: 5% 0%;
+}
+
+.mainContainer-right{
+    /* width: auto; */
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* border: 1px solid blue; */
+    align-content: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.calendar-container{
+    display: flex;
+    max-width: 800px;
+}
+
+.react-calendar{
+    /* width: 45%; */
+    font-family: 'Mulish', sans-serif;
+}
+
+.react-calendar__navigation__label, .react-calendar__navigation__arrow{
+  background-color: #FF6542;
+  color: white;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  padding: 10px;
+  border:none;
+}
+
+
+.react-calendar__navigation__arrow{
+  padding: 0px 20px;
+}
+
+.react-calendar__navigation__arrow:hover, .react-calendar__navigation__label:hover{
+  background-color: rgb(255, 145, 72);
+  cursor: pointer;
+}
+
+.react-calendar__navigation__arrow:active, .react-calendar__navigation__label:active{
+  background-color: rgb(255, 160, 72);
+}
+
+.react-calendar__month-view__weekdays{
+  margin: 10px 0px;
+}
+
+/* .react-calendar__month-view__weekdays__weekday{
+
+} */
+  
+.react-calendar__month-view__days__day{
+  font-family: 'Mulish', sans-serif;
+  font-size: 1.5rem;
+  padding: 15px 5px;
+  border: none;
+  /* border-radius: 10px; */
+  
+}
+
+.react-calendar__month-view__days__day--neighboringMonth{
+  color: #888;
+}
+
+.react-calendar__tile--active{
+  background-color: rgb(255, 145, 72);
+  color: white;
+  font-weight: 600;
+}
+
+.react-calendar__month-view__days__day:hover{
+  background-color: rgb(253, 202, 143);
+  cursor: pointer;
+}
+
+.react-calendar__year-view__months__month, .react-calendar__decade-view__years__year, .react-calendar__century-view__decades__decade{
+
+  font-family: 'Mulish', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  padding: 20px;
+  cursor: pointer;
+}

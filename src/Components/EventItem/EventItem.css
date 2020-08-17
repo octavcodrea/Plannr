@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,700;1,800&display=swap');
+
+.eventContainer{
+    font-family: 'Mulish', sans-serif;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: space-between;
+    /* border: 1px solid black; */
+    border-bottom: 1px solid lightgray;
+    margin: 10px;
+}
+
+.eventItemRegular{
+    background-color: #fff;
+}
+
+.eventItemCompleted{
+    background-color: rgb(227, 228, 233);
+}
+
+.eventImportant{
+    background-color: rgb(255, 238, 163);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.eventContainer ul{
+    list-style: none;
+    margin: 10px;
+    position: relative;
+}
+
+.eventTime{
+    display: inline-block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 5px 0px;
+}
+
+.eventTitle{
+    margin: 5px 0px;
+    font-size: 1.4rem;
+}
+
+.eventDesc{
+    margin: 5px 0px;
+    color: #555;
+}
+
+.colorBlock{
+    display: inline-block;
+    height: 20px;
+    width: 50px;
+    border-radius: 5px;
+    margin: 0px 10px;
+}
+
+.buttonContainer{
+    
+    display: block;
+    width: 300px;
+    /* height: 100%; */
+    max-height: 100px;
+    font-size: 1.4rem;
+    position: absolute;
+
+    justify-content: center;
+    align-items: center;
+
+    right: 0px;
+    /* text-align: right; */
+    /* padding: 20px 0px; */
+    
+}
+
+.buttonComplete{
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    position: absolute;
+    right: 130px;
+    padding: 10px 20px;
+    background-color: #dbffc6;
+    margin: 15px;
+    border: none;
+    border-radius: 10px;
+
+    -webkit-box-shadow: inset -3px -3px 0px 0px rgb(193, 230, 175);
+    -moz-box-shadow: inset -3px -3px 0px 0px rgb(193, 230, 175);
+    box-shadow: inset -3px -3px 0px 0px rgb(193, 230, 175);
+}
+
+.buttonComplete:hover{
+    background-color: #bdff97;
+    cursor: pointer;
+}
+
+.buttonComplete:active{
+    background-color: #abe28c;
+}
+
+.buttonDelete{
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.4rem;
+    position: absolute;
+    right: 10px;
+    padding: 10px 20px;
+    background-color: #ffdcce;
+    margin: 15px;
+    border: none;
+    border-radius: 10px;
+
+    -webkit-box-shadow: inset -3px -3px 0px 0px rgb(230, 186, 175);
+    -moz-box-shadow: inset -3px -3px 0px 0px rgb(230, 186, 175);
+    box-shadow: inset -3px -3px 0px 0px rgb(230, 186, 175);
+}
+
+.buttonDelete:hover{
+    background-color: #ffc198;
+    cursor: pointer;
+}
+
+.eventItemCompleted .buttonComplete{
+    background-color: rgb(188, 218, 211);
+
+    -webkit-box-shadow: inset -3px -3px 0px 0px rgba(193, 230, 175,0);
+    -moz-box-shadow: inset -3px -3px 0px 0px rgba(193, 230, 175,0);
+    box-shadow: inset -3px -3px 0px 0px rgba(193, 230, 175,0);
+}
+
+
+.eventItemCompleted .buttonComplete:hover{
+    background-color: rgb(188, 218, 211);
+    cursor: inherit;
+}

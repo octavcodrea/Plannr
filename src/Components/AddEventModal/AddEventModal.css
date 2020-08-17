@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,700;1,800&display=swap');
+
+
+.addEventModal{
+    display: block;
+    background-color: white;
+    width: 400px;
+    margin: auto;
+    margin-top: 10%;
+    font-size: 1.3rem;
+    align-content: center;
+    text-align: center;
+}
+
+.addEvent button{
+    /* background-color: #88498F;
+    color: white; */
+    padding: 10px;
+}
+
+.MuiButton-label{
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+}
+
+.addEventModal p{
+
+    margin: 10px;
+    padding: 0px;
+}
+
+.addEventModal input{
+    background-color: rgb(224, 226, 245);
+    border-radius: 15px;
+    border: 1px solid rgb(107, 113, 145);
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    font-family: 'Mulish', sans-serif;
+}
+
+.addEventModalHeader{
+    display: flex;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color:white;
+    background-color: #FF6542;
+    padding: 20px;
+}
+
+input[type=checkbox] {
+    display: inline-block;
+    position: relative;
+      cursor: pointer;
+    margin: 5px;
+}
+input[type=checkbox]:before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: -4px;
+    left: 0;
+    border: 2px solid #555555;
+    border-radius: 3px;
+    background-color: white;
+}
+input[type=checkbox]:checked:after {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 10px;
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: -2px;
+    left: 8px;
+}
+
+.addEventModalHeader p{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.addEventModal form{
+    margin: 20px;
+}
+
+.colorSelectContainer{
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    height: 30px;
+    margin: auto;
+    padding: 10px 5%;
+    /* border: 1px solid black; */
+}
+
+.colorBlock{
+    display: inline-block;
+    height: 30px;
+    width: 50px;
+    border-radius: 5px;
+    margin: 0px 10px;
+}
+
+.addEventModal button{
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    border-radius: 15px;
+    margin: 20px;
+    border: 1px solid rgb(146, 146, 146);
+}
+
+#colorRed{
+    background-color: #FF646C;
+}
+
+#colorBlue{
+    background-color: #65CBF6;
+}
+
+#colorYellow{
+    background-color: #FFE872;
+}
+
+#colorGreen{
+    background-color: #72E3AB;
+}
+
