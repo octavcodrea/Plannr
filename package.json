@@ -1,6 +1,6 @@
 {
-  "name": "to-do-app",
-  "version": "0.1.0",
+  "name": "plannr",
+  "version": "1.0.0",
   "private": true,
   "homepage": "http://plannr.octavcodrea.com",
   "dependencies": {
