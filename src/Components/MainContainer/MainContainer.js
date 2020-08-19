@@ -1,11 +1,11 @@
 import React from 'react';
 import Calendar from 'react-calendar';
 import Day from '../Day/Day';
-
+import Navbar from '../Navbar/Navbar';
+import Greeting from '../Greeting/Greeting';
 import './MainContainer.css';
 import EventsInMonth from '../EventsInMonth/EventsInMonth';
 
-// let dayClicked = new Date();
 
 class MainContainer extends React.Component{
     constructor(props){
@@ -15,8 +15,6 @@ class MainContainer extends React.Component{
             daySelected: new Date(),
             modalOpen: false
         };
-
-     //this.handleDayClick = this.handleDayClick.bind(this);
     }
 
     handleModalOpen = () =>{
@@ -32,7 +30,6 @@ class MainContainer extends React.Component{
     }
     
     handleDayClick = date => {
-        // console.log("[MainContainer]: ",date);
         let dateproxy = date;
         this.setState({ 
             daySelected: dateproxy 
@@ -45,8 +42,23 @@ class MainContainer extends React.Component{
         })
     }
 
+    clearLocalStorage = () =>{
+        localStorage.clear();
+
+        this.setState({
+            state: this.state
+        })
+    };
+
     render(){
         return(
+        <div>
+            <Navbar 
+                clearLocalStorage={this.clearLocalStorage}
+            />
+
+            <Greeting/>
+
         <div className="mainContainer">
             <Day 
             daySelected={this.state.daySelected} 
@@ -59,7 +71,6 @@ class MainContainer extends React.Component{
                 <div className="calendar-container">
                     <Calendar 
                         onClickDay={this.handleDayClick}
-                        //onClickDay={this.props.selectDate}
                         returnValue={"start"}
                     />
                 </div>
@@ -68,20 +79,10 @@ class MainContainer extends React.Component{
                     daySelected={this.state.daySelected}
                 />
             </div>
-            {/* <br />
-            {new Intl.DateTimeFormat("en-GB", {
-                year: "numeric",
-                month: "long",
-                day: "2-digit"
-            }).format(this.state.daySelected)} */}
+        </div>
         </div>)
     }
 };
-
-// const getClickedDate = date => {
-//     console.log(date);
-//     // dayClicked = date;
-// }
 
 
 export default MainContainer;

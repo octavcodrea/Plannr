@@ -1,0 +1,71 @@
+.settingsModal{
+    display: block;
+    background-color: white;
+    width: 400px;
+    margin: auto;
+    margin-top: 10%;
+    font-size: 1.3rem;
+    align-content: center;
+    text-align: center;
+    
+    padding-bottom: 10px;
+    animation: fadeInUp 0.4s 1;
+}
+
+#settingsButton{
+    margin: 10px 20px;
+    padding:4px;
+    position: relative;
+    display: inline-block;
+    background-color: #6e3874;
+
+    color: white;
+    width: 40px;
+    height: 40px;
+
+    
+}
+
+@keyframes fadeInUp{
+    0%{transform: translate(0px, -40px);
+        opacity:0.2;}
+    100%{transform: translate(0px, 0px);
+        opacity: 1;}
+}
+
+#settingsButton:hover{
+    background-color: #5d2b63;
+}
+
+#settingsButton img{
+    width: 30px;
+    height: 100%;
+    padding: 0px;
+}
+
+.settingsModalHeader{
+    display: flex;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color:white;
+    background-color: #6e3874;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.settingsModal p{
+    font-size: 1rem;
+    margin: 5px 20px;
+}
+
+.closePanel{
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    border-radius: 15px;
+    margin: 20px;
+    border: 1px solid rgb(146, 146, 146);
+
+    cursor: pointer;
+}

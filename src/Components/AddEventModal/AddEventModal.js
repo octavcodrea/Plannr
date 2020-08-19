@@ -4,55 +4,11 @@ import Button from '@material-ui/core/Button';
 import Modal from '@material-ui/core/Modal';
 import { NativeSelect, InputLabel } from '@material-ui/core';
 import './AddEventModal.css';
-// import PropTypes from 'prop-types';
-// import useState from 'react';
-
-// function rand() {
-//     return Math.round(Math.random() * 20) - 10;
-// }
-
-// function getModalStyle() {
-//     const top = 50 + rand();
-//     const left = 50 + rand();
-//     return {
-//         top: `${top}%`,
-//         left: `${left}%`,
-//         transform: `translate(-${top}%, -${left}%)`,
-//     };
-// }
-
-// const useStyles = makeStyles(theme => ({
-//     modal: {
-//         display: 'flex',
-//         alignItems: 'center',
-//         justifyContent: 'center',
-//     },
-//     paper: {
-//         position: 'absolute',
-//         width: 450,
-//         backgroundColor: theme.palette.background.paper,
-//         boxShadow: theme.shadows[5],
-//         padding: theme.spacing(2, 4, 3),
-//     },
-// }));
 
 const AddEventModal = ({ formatDate, submitAddEvent, addEventTime, addEventTitle, addEventDescription, addEventImportant, addEventColor, time, title, description, color, important, rerender, modalOpen, handleModalOpen, handleModalClose }) => {
 
-    // const classes = useStyles();
-    // const [modalStyle] = React.useState(getModalStyle);
-    // const [open, setOpen] = React.useState(false);
-
-    // const handleOpen = () => {
-    //     setOpen(true);
-    // };
-
-    // const handleClose = () => {
-    //     setOpen(false);
-        
-    // };
-
     return (
-        <div>
+        <div className="addEventContainer">
             <Button className="addEventButton" onClick={handleModalOpen}>
                 + Add Event
             </Button>
@@ -110,16 +66,15 @@ const AddEventModal = ({ formatDate, submitAddEvent, addEventTime, addEventTitle
 
                         <div className="colorSelectContainer">
                             <input type="radio" id="red" name="color" value="#FF646C" onChange={addEventColor} defaultChecked={"#FF646C"} />
-                            {/* <label for="red" className="colorRed" >red</label><br /> */}
                             <div className="colorBlock" id="colorRed"></div>
+
                             <input type="radio" id="blue" name="color" value="#65CBF6" onChange={addEventColor}/>
-                            {/* <label for="blue">blue</label><br /> */}
                             <div className="colorBlock" id="colorBlue"></div>
+
                             <input type="radio" id="yellow" name="color" value="#FFE872" onChange={addEventColor}/>
-                            {/* <label for="yellow">yellow</label> */}
                             <div className="colorBlock" id="colorYellow"></div>
+
                             <input type="radio" id="green" name="color" value="#72E3AB" onChange={addEventColor}/>
-                            {/* <label for="green">green</label> */}
                             <div className="colorBlock" id="colorGreen"></div>
                         </div>
 

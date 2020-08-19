@@ -1,6 +1,7 @@
 import React from 'react';
 // import SearchField from '../SearchField/SearchField';
 import './Navbar.css';
+import SettingsModal from '../SettingsModal/SettingsModal';
 
 class Navbar extends React.Component{
 
@@ -11,7 +12,11 @@ class Navbar extends React.Component{
                 <h1>Plannr.</h1>
             </div>
 
-            {/* <SearchField /> */}
+            <div>
+                <SettingsModal
+                    clearLocalStorage={this.props.clearLocalStorage}
+                />
+            </div>
         </div>)
     }
 }

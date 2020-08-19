@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,700;1,800&display=swap');
 
 .navbar{
-    display: block;
+    display: flex;
+    justify-content: space-between;
     height: 60px;
     background-color: #88498F;
 }
 
 h1{
+    display: inline-block;
     font-family: 'Mulish', sans-serif;
     font-size: 2.5rem;
     font-weight: 700;

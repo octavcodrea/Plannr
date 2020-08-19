@@ -2,13 +2,6 @@ import React from 'react';
 import './EventsInMonth.css';
 
 class EventsInMonth extends React.Component{
-    // constructor(props){
-    //     super(props);
-
-    //     this.state={
-    //         daySelected: this.props.daySelected
-    //     }
-    // }
     
     formatDate = (date) => {
         var d = new Date(date),
@@ -32,11 +25,13 @@ class EventsInMonth extends React.Component{
 
         let dateMonthYear = dateId.slice(0, dateId.length-2);
 
+        // Checks every day if there are any events present.
+        // Sets the value in an array of the number of events in each day.
+        // Sets the value in another array if there are any important events in a certain day.
         for(i=1; i<=31; i++){
             eventsInMonthImportant[i] = 0;
 
             for(j=0; j<10; j++){
-                // console.log(`${dateMonthYear}${i}-${j}`);
                 if (localStorage.getItem(`${dateMonthYear}${i}-${j}`) !== null && localStorage.getItem(`${dateMonthYear}${i}-${j}`) !== "null"){
                     eventsInMonth[i] = j;
                     
@@ -50,7 +45,6 @@ class EventsInMonth extends React.Component{
 
         let month = (this.props.daySelected.getMonth() + 1);
 
-        // let monthFormat = 
         switch(month){
             default: month = "January"; break;
             case 1: month = "January"; break;
@@ -66,6 +60,8 @@ class EventsInMonth extends React.Component{
             case 11: month = "November"; break;
             case 12: month = "December"; break;
         }
+
+        // Formats the [events in the month] data
 
         // eslint-disable-next-line array-callback-return
         const listItems = eventsInMonth.map((item, index) =>{
@@ -90,9 +86,6 @@ class EventsInMonth extends React.Component{
         return listItems;
     }
        
-
-        
-
     render(){
         let date = this.formatDate(this.props.daySelected);
 

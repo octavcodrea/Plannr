@@ -8,6 +8,15 @@
     /* border: 1px solid black; */
     border-bottom: 1px solid lightgray;
     margin: 10px;
+
+    animation: fadeIn 0.4s linear 1;
+}
+
+@keyframes fadeIn{
+    0%{transform: translate(-40px, 0px);
+        opacity:0.2;}
+    100%{transform: translate(0px, 0px);
+        opacity: 1;}
 }
 
 .eventItemRegular{
@@ -56,20 +65,17 @@
 }
 
 .buttonContainer{
-    
-    display: block;
-    width: 300px;
+    position: absolute;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    /* width: 300px; */
     /* height: 100%; */
     max-height: 100px;
     font-size: 1.4rem;
-    position: absolute;
+    /* position: absolute; */
 
-    justify-content: center;
-    align-items: center;
-
-    right: 0px;
-    /* text-align: right; */
-    /* padding: 20px 0px; */
     
 }
 
@@ -77,13 +83,15 @@
     font-family: 'Mulish', sans-serif;
     font-size: 1.4rem;
     font-weight: 600;
-    position: absolute;
-    right: 130px;
+    /* position: absolute; */
+    /* right: 130px; */
     padding: 10px 20px;
     background-color: #dbffc6;
     margin: 15px;
     border: none;
     border-radius: 10px;
+
+    transition: linear 0.2s;
 
     -webkit-box-shadow: inset -3px -3px 0px 0px rgb(193, 230, 175);
     -moz-box-shadow: inset -3px -3px 0px 0px rgb(193, 230, 175);
@@ -102,13 +110,15 @@
 .buttonDelete{
     font-family: 'Mulish', sans-serif;
     font-size: 1.4rem;
-    position: absolute;
-    right: 10px;
+    /* position: absolute; */
+    /* right: 10px; */
     padding: 10px 20px;
     background-color: #ffdcce;
     margin: 15px;
     border: none;
     border-radius: 10px;
+
+    transition: linear 0.2s;
 
     -webkit-box-shadow: inset -3px -3px 0px 0px rgb(230, 186, 175);
     -moz-box-shadow: inset -3px -3px 0px 0px rgb(230, 186, 175);
@@ -132,4 +142,65 @@
 .eventItemCompleted .buttonComplete:hover{
     background-color: rgb(188, 218, 211);
     cursor: inherit;
+}
+
+@media only screen and (min-width: 950px) and (max-width: 1440px){
+    .eventTime{
+        font-size: 1.6rem;
+    }
+
+    .buttonComplete, .buttonDelete{
+        font-size: 1rem;
+        padding: 7px 13px;
+        margin: 15px 5px;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 949px){
+    .eventContainer{
+        flex-wrap: wrap;
+    }
+
+    .eventTime{
+        font-size: 1.6rem;
+    }
+
+    .eventTitle{
+        font-size: 1.4rem;
+    }
+
+    .buttonContainer{
+        position: relative;
+        padding: 0px 10px;
+    }
+
+    .buttonComplete, .buttonDelete{
+        max-height: 50px;
+        font-size: 1rem;
+        padding: 7px 13px;
+        margin: 15px 5px;
+    }
+}
+
+@media only screen and (max-width: 599px){
+
+    .eventTime{
+        font-size: 1.6rem;
+    }
+
+    .eventTitle{
+        font-size: 1.4rem;
+    }
+
+    .buttonContainer{
+        position: absolute;
+        padding: 0px 10px;
+    }
+
+    .buttonComplete, .buttonDelete{
+        max-height: 50px;
+        font-size: 1rem;
+        padding: 7px 13px;
+        margin: 15px 5px;
+    }
 }

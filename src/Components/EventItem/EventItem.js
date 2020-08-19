@@ -2,8 +2,10 @@ import React from 'react';
 import './EventItem.css';
 
 const EventItem = ({id, time, title, color, desc, important, evComplete, evDelete}) =>{
+
+    // Formats time.
+    // Takes 06:00 as the first hour of the day.
     const formatTime = (time) =>{
-        // console.log('[EventItem] time variable is',time,'and its type is',typeof time);
         time.toString();
         switch(time){
             default: return '06:00';
@@ -53,8 +55,6 @@ const EventItem = ({id, time, title, color, desc, important, evComplete, evDelet
                 <li key={id-3} className="eventDesc">{desc}</li>
                 {formatImportant(id,important)}
                 
-                {/* <li key={id-4} className="eventImportant">{important}</li> */}
-                {/* <li key={5} className="eventColor">{color}</li> */}
             </ul>
             <div className="buttonContainer" id={id}>
                 <button onClick={evComplete} className="buttonComplete">Complete</button>

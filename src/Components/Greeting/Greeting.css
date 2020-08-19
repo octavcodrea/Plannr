@@ -1,0 +1,12 @@
+.greeting{
+
+    margin:auto;
+    margin-top: 20px;
+    
+    text-align: center;
+}
+
+.greeting p{
+    font-size: 1.2rem;
+    font-weight: 600;
+}

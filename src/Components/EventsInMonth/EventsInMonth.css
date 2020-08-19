@@ -28,3 +28,10 @@
     background-color: rgb(255, 247, 211);
     padding: 0px 10px;
 }
+
+@media only screen and (max-width: 599px){
+    .eventsInMonth{
+        height: auto;
+        max-height: 200px
+    }
+}
