@@ -1,3 +1,5 @@
+## Plannr.
+
 https://plannr.octavcodrea.com
 
 Plannr. is a events scheduling and organizing app that stores data in the browser's local storage.
